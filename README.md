@@ -1,14 +1,16 @@
 ## Project: Help Me (Web and Mobile)
 
-### Descriptive:  An application web and mobile, where you can  help someone, mainly after covid-19 pandemia. There is a list of cases containing details about the needs, you help with what you have to offer, may be care, food, money, or even a attention.
+## Descriptive:  An application web and mobile, where you can  help someone, mainly after covid-19 pandemia. There is a list of cases containing details about the needs, you help with what you have to offer, may be care, food, money, or even some attention.
+
+## Design:
+**The wireframes**           : https://www.figma.com
+
+**Visual identity (Colors)** : https://pigment.shapefactory.co
+
+![wireframe of the application](https://github.com/fernandojvlima/helpMe/blob/master/wireframes.png)
 
 
-
-Building the Application, day by day:
-
-Day 1: Backend
-
- Tools and Resources used in the Backend:
+### Tools and Resources used in the Backend:
 
 - NodeJs (The javascript resource)
 - Express (Mini framework)
@@ -18,11 +20,12 @@ Day 1: Backend
 - Insomnia (To validate the requests HTTP)
 - CORS (To insert a security layer)
 
-Obs: IDE Visual  Studio Code  
+Obs: IDE Visual Studio Code  
 
 Step by Step (Building the application from start):
 
-Terminal (inside the project folder):
+### Terminal (inside the project folder):
+
 
 $ mkdir backend
 
@@ -32,33 +35,33 @@ $ cd backend
 
 $ npm install express 
 
----
 
+---
+```javascript 
 Add a index.js containing:
 
-*const express = require('express');*
+const express = require('express');
 
-*const app = express( );*
+const app = express( );
 
-*app.get('/', (request, response) => {*
+app.get('/', (request, response) => {
 
-*return response.json({*
+return response.json({
 
-*event: "Semana Omnistack",*
+event: "Semana Omnistack",
 
-*user: "Fernando Lima"*
+user: "Fernando Lima"
 
-*})*
+})
 
-*})*
+})
 
-*app.listen(3333)* 
+app.listen(3333)
 
 ⇒ at the terminal : node index.js
 
 Put the server up again and check the response.
-
----
+```
 
 **Day 2:  Backend**
 
@@ -83,11 +86,11 @@ You will get the info from the request (named params, name, page, etc)
 
 Route Params: to identify resources, a ID for example users/1093
 
-*const params = request.params*
+const params = request.params
 
 Request Body: Body of requisition, in a form : name, age, email...
 
- *const body = request.body*
+const body = request.body
 
 After the method , you need to inform the route and the resource
 
@@ -95,7 +98,7 @@ After the method , you need to inform the route and the resource
 
 ---
 
-Note:
+### Note:
 
 You need to inform to express that you are going to use JSON in the requisitions, otherwise always will return undefined
 
@@ -171,7 +174,7 @@ Who are the entities to be created at DB?
 
 Ongs
 
-Incidents
+### Incidents
 
 What are the functionalities?
 
@@ -193,7 +196,7 @@ Get in Contact - WhatsApp
 
 ---
 
-Creating Tables using Knex - Migration
+### Creating Tables using Knex - Migration
 
 Add a folder named migrations in the database folder
 
@@ -311,7 +314,7 @@ all controllers will use this connection to process the requests.
 
 ---
 
-Go to Insonmia, add routes in a new Workspace.
+### Go to Insonmia, add routes in a new Workspace.
 
 And in the routes.js
 
@@ -325,7 +328,7 @@ Create the related methods for each Controller.
 
 Check out the code ;) 
 
-Install Cors 
+$ npm install cors 
 
 and At the Index
 
