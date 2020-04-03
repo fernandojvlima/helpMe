@@ -1,0 +1,21 @@
+.btnPrimary {
+  background-color: #494871;
+  position: absolute;
+  width: 351px;
+  height: 60px;
+  left: 358px;
+  top: 479px;
+  border-radius: 10px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  /* identical to box height */
+
+  text-align: center;
+
+  /* Background */
+
+  color: #f0f0f5;
+}

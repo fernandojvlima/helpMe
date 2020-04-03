@@ -1,13 +1,12 @@
-import React, { useState } from 'react';
-import Header from './components/Header';
+import React from 'react';
+import Logon from './pages/Logon';
 
 function App() {
 
 
   return (
     <div>
-      <Header>Semana Omnistack </Header>
-
+      <Logon />
     </div>
   )
 }
