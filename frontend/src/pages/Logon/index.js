@@ -54,7 +54,7 @@ export default function Logon() {
         </div>
 
         <div className="linkRegister">
-          <Link to="/register"><p><FiLogIn size={16} /> Not yet registered, click here.</p></Link>
+          <Link to="/register"><p><FiLogIn size={16} />  Not yet registered, click here.</p></Link>
         </div>
 
       </form>

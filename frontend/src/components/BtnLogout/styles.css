@@ -1,0 +1,8 @@
+.BtnLogout {
+  width: 60px;
+  height: 60px;
+  color: #1f76bb;
+  border-radius: 8px;
+  border: 1px solid #1f76bb;
+  margin-left: 10px;
+}
