@@ -1,17 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './styles.css';
 import logo from '../../assets/logo.png';
 import imageLogon from './../../assets/imageLogon.png';
 import BtnPrimary from './../../components/BtnPrimary/index';
 import InputStd from './../../components/InputStd';
-import { FiLogOut } from 'react-icons/fi'
+import { FiLogIn } from 'react-icons/fi';
+import axios from 'axios';
+import { Redirect, Link } from 'react-router-dom';
 
 
 export default function Logon() {
+
+  const [login, setLogin] = useState('')
+  const [ong, setOng] = useState('');
+
+  function handleChange(e) {
+    const inputValue = e.target.value;
+    setLogin(inputValue)
+  }
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    try {
+      const res = await axios.post('http://localhost:3333/session', {
+        id: login
+      })
+
+      return <Redirect to="/cases" />
+
+    } catch (err) {
+      alert(err)
+    }
+  }
+
   return (
     <div className="container">
-
-      <div className="section">
+      <form className="section" onSubmit={(e) => handleSubmit(e)}>
         <div className="imgLogin">
           <img src={logo} alt="logo help me" />
         </div>
@@ -22,18 +46,18 @@ export default function Logon() {
         </div>
 
         <div className="input">
-          <InputStd type="text" placeholder="Your ID" />
+          <InputStd className="inputStd" type="text" placeholder="Your ID" onChange={handleChange} />
         </div>
 
         <div className="buttonLogin">
-          <BtnPrimary name="Login" />
+          <BtnPrimary name="Login" type="submit" />
         </div>
 
         <div className="linkRegister">
-          <p><FiLogOut /> Not yet registered, click here.</p>
+          <Link to="/register"><p><FiLogIn size={16} /> Not yet registered, click here.</p></Link>
         </div>
 
-      </div>
+      </form>
 
       <div className="aside">
         <div className="imageLogon">

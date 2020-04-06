@@ -9,16 +9,16 @@ module.exports = {
     console.log(count);
 
     const cases = await connection('cases')
-      .join('ongs', 'ongs_id', '=', 'cases.ong_id')
-    limit(5)
-    offset((page - 1) * 5)
+      .join('ongs', 'ongs.id', '=', 'cases.ong_id')
+      .limit(5)
+      .offset((page - 1) * 5)
       .select([
-        'incidents.*',
-        'ongs_name',
-        'ongs_email',
-        'ongs_whatsapp',
-        'ongs_city',
-        'ongs_uf'
+        'cases.*',
+        'ongs.name',
+        'ongs.email',
+        'ongs.whatsapp',
+        'ongs.city',
+        'ongs.uf'
       ])
     response.header('X-Total-Count', count['count(*)'])
     return response.json(cases)

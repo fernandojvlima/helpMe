@@ -2,6 +2,7 @@
   width: 351px;
   height: 60px;
   border-radius: 8px;
+  border: 1px solid #cecece;
   background-color: #ffffff;
   color: #737380;
   font-family: Roboto;
@@ -10,4 +11,5 @@
   font-size: 18px;
   line-height: 21px;
   margin-bottom: 20px;
+  padding-left: 10px;
 }

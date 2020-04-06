@@ -22,3 +22,12 @@ textarea {
 button {
   cursor: pointer;
 }
+
+h1 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 36px;
+  color: #1f76bb;
+}
