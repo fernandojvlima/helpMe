@@ -9,8 +9,8 @@
 
 body {
   font: 400 14px Roboto, sans-serif;
-  background-color: #fbe188;
   -webkit-font-smoothing: antialiased;
+  background-color: #ffffff;
 }
 
 input,

@@ -1,0 +1,13 @@
+.inputStd {
+  width: 351px;
+  height: 60px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #737380;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  margin-bottom: 20px;
+}

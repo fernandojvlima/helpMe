@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap");
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.section .titleLogon h1 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 36px;
+  color: #1f76bb;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.section .imgLogin {
+  max-width: 169px;
+  max-height: 166px;
+  margin-bottom: 80px;
+}
+
+.section .inputStd {
+  padding-left: 10px;
+}
+
+.section .buttonLogin {
+  margin-bottom: 30px;
+}
+
+.section .linkRegister {
+  display: flex;
+  align-self: flex-start;
+  color: #1f76bb;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  margin-bottom: 50px;
+}
+
+.aside {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.aside .imageLogon {
+  max-width: 408px;
+  max-height: 172px;
+  margin-bottom: 50px;
+}
+
+.aside .titleAside {
+  font-family: Roboto;
+  color: #1f76bb;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+  margin-bottom: 20px;
+}
+
+.aside .phraseAside {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  /* identical to box height, or 150% */
+
+  color: #737380;
+}
