@@ -18,12 +18,12 @@ export default function Register() {
           Do not inform contacts or names of people involved  in order to
           maintain the confidentiality
         </p>
-        <Link to="/"><p><FiArrowLeft size={16} />  Back to Home</p></Link>
+        <Link to="/profile"><p><FiArrowLeft size={16} />  Back to Home</p></Link>
       </div>
 
       <div className="form">
         <InputStd type="text" className="inputStd" name="title" placeholder="Title of the Case" />
-        <InputStd type="email" className="inputDescription" name="description" placeholder="Description" />
+        <textarea type="textarea" className="textarea" name="description" placeholder="Description" />
         <InputStd type="text" className="inputStd" name="value" placeholder="Value" />
         <div className="buttonGroup">
           <BtnCancel type="button" name="Cancel" />

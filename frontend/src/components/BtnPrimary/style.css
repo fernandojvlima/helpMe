@@ -20,6 +20,6 @@
   transition: 0.2s;
 }
 
-.btnPrimary:hover {
+.btnPrimary :hover {
   filter: brightness(90%);
 }

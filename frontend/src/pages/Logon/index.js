@@ -1,62 +1,51 @@
 import React, { useState } from 'react';
+import { Link, useHistory } from 'react-router-dom';
+import api from './../../services/api';
 import './styles.css';
 import logo from '../../assets/logo.png';
 import imageLogon from './../../assets/imageLogon.png';
 import BtnPrimary from './../../components/BtnPrimary/index';
 import InputStd from './../../components/InputStd';
 import { FiLogIn } from 'react-icons/fi';
-import axios from 'axios';
-import { Redirect, Link } from 'react-router-dom';
-
 
 export default function Logon() {
 
-  const [login, setLogin] = useState('')
-  const [ong, setOng] = useState('');
+  const history = useHistory();
+  const [id, setId] = useState('');
 
-  function handleChange(e) {
-    const inputValue = e.target.value;
-    setLogin(inputValue)
-  }
 
-  async function handleSubmit(e) {
+  async function handleLogon(e) {
     e.preventDefault();
-    try {
-      const res = await axios.post('http://localhost:3333/session', {
-        id: login
-      })
+    const data = {
+      id
+    }
 
-      return <Redirect to="/cases" />
-
-    } catch (err) {
-      alert(err)
+    if (id !== '') {
+      try {
+        const response = await api.post('/session', data)
+        alert(`Login Efetuado: ${response.data.name}`)
+        history.push('/profile')
+      } catch (err) {
+        alert('Erro no Login, tente novamente!')
+      }
+    } else {
+      alert('Campos Obrigatórios não preenchidos')
     }
   }
-
   return (
     <div className="container">
-      <form className="section" onSubmit={(e) => handleSubmit(e)}>
+
+      <form className="section" onSubmit={handleLogon}>
         <div className="imgLogin">
           <img src={logo} alt="logo help me" />
         </div>
+        <h1>I am ONG {id}</h1>
+        <InputStd className="inputStd" type="text" name="id" placeholder="Your ID" value={id} onChange={(e) => setId(e.target.value)} />
 
-
-        <div className="titleLogon">
-          <h1>I am ONG</h1>
-        </div>
-
-        <div className="input">
-          <InputStd className="inputStd" type="text" placeholder="Your ID" onChange={handleChange} />
-        </div>
-
-        <div className="buttonLogin">
-          <BtnPrimary name="Login" type="submit" />
-        </div>
-
+        <BtnPrimary value="Login" type="submit" />
         <div className="linkRegister">
           <Link to="/register"><p><FiLogIn size={16} />  Not yet registered, click here.</p></Link>
         </div>
-
       </form>
 
       <div className="aside">
