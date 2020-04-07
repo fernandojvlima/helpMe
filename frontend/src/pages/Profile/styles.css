@@ -80,13 +80,3 @@
 .card .btnIcon:hover {
   opacity: 0.8;
 }
-
-.btnPrimary {
-  width: 264px;
-  height: 64px;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 18px;
-}

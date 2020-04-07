@@ -87,9 +87,9 @@
   padding: 10px 0 10px 10px;
 }
 
-.form .btnPrimary {
-  width: 260px;
-  height: 60px;
-  margin-left: 20px;
-  border: 1px solid #29b674;
+.buttonGroup {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }

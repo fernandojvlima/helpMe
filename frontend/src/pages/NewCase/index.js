@@ -27,7 +27,7 @@ export default function Register() {
         <InputStd type="text" className="inputStd" name="value" placeholder="Value" />
         <div className="buttonGroup">
           <BtnCancel type="button" name="Cancel" />
-          <BtnPrimary className="btnPrimary" type="submit" value="Register" />
+          <BtnPrimary className="btnPrimary" type="submit" value="Register" style={{ width: 260 }} />
         </div>
 
       </div>

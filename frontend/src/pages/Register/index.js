@@ -60,7 +60,7 @@ export default function Register() {
           <InputStd type="text" className="inputStd" id="city" name="city" placeholder="City" value={city} onChange={(e) => setCity(e.target.value)} />
           <InputStd type="text" className="inputStd" id="uf" name="uf" placeholder="UF" value={uf} onChange={(e) => setUf(e.target.value)} />
         </div>
-        <BtnPrimary type="submit" className="btnPrimary" value="Register" />
+        <BtnPrimary type="submit" value="Register" style={{ width: 448 }} />
       </form>
     </div>
   )
