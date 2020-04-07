@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logoTransparent from './../../assets/logoTransparent.png';
 import BtnPrimary from './../../components/BtnPrimary';
 import BtnLogout from './../../components/BtnLogout';
@@ -11,11 +12,11 @@ export default function Profile() {
       <div className="header">
         <div className="leftContent">
           <img src={logoTransparent} alt="logo" />
-          <p>Welcome Fernando</p>
+          <span>Welcome Fernando</span>
         </div>
 
         <div className="rightContent">
-          <BtnPrimary type="button" value="Register a new case" />
+          <Link to="/cases/new"> <BtnPrimary type="button" value="Register a new case" /></Link>
           <BtnLogout type="button" value="Logout" />
         </div>
       </div>
@@ -23,10 +24,9 @@ export default function Profile() {
       <h1>Cases</h1>
 
       <div className="casesContainer">
-
         <div className="card">
+          <button className="btnIcon" type="button"><FiTrash2 size={20} color="#a8a8b3" /></button>
           <p className="cardTitle">
-            <p><FiTrash2 size={16} /></p>
             Case:
           </p>
           <p>Family needing medicine</p>
@@ -40,58 +40,6 @@ export default function Profile() {
           </p>
           <p>R$ 120,00</p>
         </div>
-
-        <div className="card">
-          <p className="cardTitle">
-            <p><FiTrash2 size={16} /></p>
-            Case:
-          </p>
-          <p>Family needing medicine</p>
-          <p className="cardTitle">
-            Briefing:
-          </p>
-          <p>Live in this house two old people plus 65+, they have no jobs
-          or any source of money. Both need medicine or money.</p>
-          <p className="cardTitle">
-            Value:
-          </p>
-          <p>R$ 120,00</p>
-        </div>
-
-        <div className="card">
-          <p className="cardTitle">
-            <p><FiTrash2 size={16} /></p>
-            Case:
-          </p>
-          <p>Family needing medicine</p>
-          <p className="cardTitle">
-            Briefing:
-          </p>
-          <p>Live in this house two old people plus 65+, they have no jobs
-          or any source of money. Both need medicine or money.</p>
-          <p className="cardTitle">
-            Value:
-          </p>
-          <p>R$ 120,00</p>
-        </div>
-
-        <div className="card">
-          <p className="cardTitle">
-            <p className="cardIcon"><FiTrash2 size={16} /></p>
-            Case:
-          </p>
-          <p>Family needing medicine</p>
-          <p className="cardTitle">
-            Briefing:
-          </p>
-          <p>Live in this house two old people plus 65+, they have no jobs
-          or any source of money. Both need medicine or money.</p>
-          <p className="cardTitle">
-            Value:
-          </p>
-          <p>R$ 120,00</p>
-        </div>
-
 
       </div>
     </div>

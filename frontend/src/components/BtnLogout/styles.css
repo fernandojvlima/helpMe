@@ -5,4 +5,10 @@
   border-radius: 8px;
   border: 1px solid #1f76bb;
   margin-left: 10px;
+  background: transparent;
+  transition: 0.2s;
+}
+
+.BtnLogout:hover {
+  color: #cecece;
 }

@@ -4,16 +4,17 @@ import Logon from './pages/Logon';
 import Home from './pages/Home';
 import Register from './pages/Register';
 import Profile from './pages/Profile';
+import NewCase from './pages/NewCase';
 
 export default function Routes() {
   return (
     <Router>
       <Switch>
         <Route exact path="/" component={Logon} />
-        <Route path="/cases" component={Home} />
+        <Route exact path="/cases" component={Home} />
         <Route path="/register" component={Register} />
-        <Route pathe="/profile" component={Profile} />
-
+        <Route path="/profile" component={Profile} />
+        <Route path="/cases/new" component={NewCase} />
       </Switch>
     </Router>
   )
