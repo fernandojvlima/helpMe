@@ -14,25 +14,38 @@
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   justify-content: space-between;
 }
 
-.header span {
+.header .welcome-title {
   margin-left: 24px;
+  color: #1f76bb;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
   font-size: 20px;
+  line-height: 18px;
 }
 
-.mainContent h1 {
-  margin-bottom: 24px;
-  margin-top: 80px;
+.header img {
+  align-self: center;
+  max-width: 171px;
+  max-height: 127px;
 }
-.leftContent {
+
+.header .leftContent {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
+}
+
+.mainContent .title-cases {
+  margin-bottom: 24px;
+  margin-top: 20px;
 }
 
 .casesContainer {

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import api from './../../services/api';
 import { useHistory } from 'react-router-dom'
 import './styles.css';
-import logoTransparent from './../../assets/logoTransparent.png';
+import logo2 from './../../assets/logo2.png';
 import { FiArrowLeft } from 'react-icons/fi'
 import { Link } from 'react-router-dom';
 import InputStd from './../../components/InputStd';
@@ -41,15 +41,13 @@ export default function Register() {
   }
 
   function handleCancel() {
-    setTitle('')
-    setDescription('')
-    setValue('')
+    history.push('/profile')
   }
 
   return (
     <div className="container-register">
       <div className="section">
-        <img src={logoTransparent} alt="Help Me" />
+        <img src={logo2} alt="Help Me" />
         <h1>Register a Case</h1>
         <p>
           All cases to be registered must be verified by  ONG.
@@ -64,7 +62,7 @@ export default function Register() {
         <textarea type="textarea" className="textarea" name="description" placeholder="Description" onChange={e => setDescription(e.target.value)} />
         <InputStd type="text" className="inputStd" name="value" placeholder="Value" onChange={e => setValue(e.target.value)} />
         <div className="buttonGroup">
-          <BtnCancel type="button" name="Cancel" onClick={() => handleCancel} />
+          <BtnCancel type="button" name="Cancel" onClick={() => handleCancel()} />
           <BtnPrimary className="btnPrimary" type="submit" value="Register" style={{ width: 260 }} />
         </div>
 

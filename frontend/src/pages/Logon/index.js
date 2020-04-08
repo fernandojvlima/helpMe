@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import api from './../../services/api';
 import './styles.css';
-import logoTransparent from './../../assets/logoTransparent.png';
 import imageLogon from './../../assets/imageLogon.png';
 import BtnPrimary from './../../components/BtnPrimary/index';
 import InputStd from './../../components/InputStd';
@@ -34,10 +33,9 @@ export default function Logon() {
     }
   }
   return (
-    <div className="container">
+    <div className="mainContent">
       <form className="section" onSubmit={handleLogon}>
-        <img className="logoImg" src={logoTransparent} alt="logo help me" />
-        <h1>I am ONG</h1>
+        <h1 className="title-ong">I am ONG</h1>
         <InputStd className="inputStd" type="text" name="id" placeholder="Your ID" value={id} onChange={(e) => setId(e.target.value)} />
 
         <BtnPrimary id="logon-btn" value="Login" type="submit" />
@@ -59,7 +57,6 @@ export default function Logon() {
           <p>We are together</p>
         </div>
       </div>
-
     </div>
 
   )

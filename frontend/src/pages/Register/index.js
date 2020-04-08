@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import './styles.css';
-import logoTransparent from './../../assets/logoTransparent.png';
-import { FiArrowLeft } from 'react-icons/fi'
 import api from './../../services/api';
+import './styles.css';
+import logo2 from './../../assets/logo2.png';
+import { FiArrowLeft } from 'react-icons/fi'
 import { Link, useHistory } from 'react-router-dom';
 import InputStd from './../../components/InputStd';
 import BtnPrimary from './../../components/BtnPrimary';
@@ -43,7 +43,7 @@ export default function Register() {
   return (
     <div className="container-register">
       <div className="section">
-        <img src={logoTransparent} alt="Help Me" />
+        <img src={logo2} alt="Help Me" />
         <h1>Register your ONG</h1>
         <p>
           To join our community and post, first you need to be an ONG,

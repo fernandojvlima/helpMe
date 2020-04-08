@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import api from './../../services/api';
 import { Link, useHistory } from 'react-router-dom';
-import logoTransparent from './../../assets/logoTransparent.png';
+import logo2 from './../../assets/logo2.png';
 import BtnPrimary from './../../components/BtnPrimary';
 import BtnLogout from './../../components/BtnLogout';
 import { FiTrash2 } from 'react-icons/fi'
@@ -48,16 +48,16 @@ export default function Profile() {
     <div className="mainContent">
       <div className="header">
         <div className="leftContent">
-          <img src={logoTransparent} alt="logo" />
-          <span>Welcome {ongLogged}</span>
+          <img src={logo2} alt="logo" />
+          <span className="welcome-title">Welcome, {ongLogged}</span>
         </div>
 
         <div className="rightContent">
           <Link to="/cases/new"> <BtnPrimary type="button" value="Register a new case" style={{ width: 264 }} /></Link>
-          <BtnLogout type="button" value="Logout" onClick={() => handleLogout} />
+          <BtnLogout type="button" value="Logout" onClick={() => handleLogout()} />
         </div>
       </div>
-      <h1>Cases</h1>
+      <h1 className="title-cases">Cases</h1>
 
       <div className="casesContainer">
         {cases.map((e) => {
