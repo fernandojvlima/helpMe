@@ -54,7 +54,7 @@ export default function Profile() {
 
         <div className="rightContent">
           <Link to="/cases/new"> <BtnPrimary type="button" value="Register a new case" style={{ width: 264 }} /></Link>
-          <BtnLogout type="button" value="Logout" onClick={handleLogout} />
+          <BtnLogout type="button" value="Logout" onClick={() => handleLogout} />
         </div>
       </div>
       <h1>Cases</h1>
