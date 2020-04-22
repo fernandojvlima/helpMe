@@ -11,6 +11,8 @@ This project was created following the Omnistack 11 course by Rocketseat.
 
 ![wireframe of the application](https://github.com/fernandojvlima/helpMe/blob/master/wireframes.png)
 
+![wireframe of the application mobile](https://github.com/fernandojvlima/helpMe/blob/master/wireframe-mobile.png)
+
 
 ### Tools and Resources used in the Backend:
 
